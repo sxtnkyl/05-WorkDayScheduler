@@ -45,12 +45,12 @@ for (let i = 9; i < 18; i++) {
 //check if hour has updated- change colors
 function updateTimeBlocks() {
   let currentHour = moment().hours();
-  let testHour = 13;
+  // let testHour = 13;
   for (let i = 9; i < 18; i++) {
     let row = document.getElementById(i);
     //update colors
-    if (row.id < testHour) $(row).addClass('past');
-    else if (row.id == testHour) $(row).removeClass('past'), $(row).addClass('present'); else $(row).removeClass('past'), $(row).removeClass('present'), $(row).addClass('future')
+    if (row.id < currentHour) $(row).addClass('past');
+    else if (row.id == currentHour) $(row).removeClass('past'), $(row).addClass('present'); else $(row).removeClass('past'), $(row).removeClass('present'), $(row).addClass('future')
   }
 }
 updateTimeBlocks();
